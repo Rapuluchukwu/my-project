@@ -1,9 +1,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,24 +11,25 @@ body {
 }
 
 .notification {
-  background-color: #f4f8fa;
   padding: 100px;
   text-align: center;
+  background-color: #f4f8fa;
 }
 
-h1 {
+.notification h1 {
   font-weight: 100;
 }
 
 .new-extension {
-  background-color: #d7f8e8;
-  color: #006400;
-  padding: 4px 8px 4px 4px;
-  border-radius: 20px;
-  font-size: 14px;
   width: 300px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #006400;
   margin: -15px auto;
   text-align: center;
+  border-radius: 10px;
+  padding: 5px 9px 5px 5px;
+  background-color: #d7f8e8;
 }
 
 .new-extension:hover {
@@ -36,23 +37,23 @@ h1 {
 }
 
 .content {
+  gap: 20px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  margin-left: 100px;
+  padding-left: 50px;
+  flex-direction: row;
 }
 
 .image {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  float: left;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #000000;
+  top: 40px;
   margin: 0;
   padding: 0;
+  width: 600px;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  background: #000000;
 }
 
 .image * {
@@ -71,34 +72,33 @@ h1 {
 }
 
 .image.icon i {
-  position: absolute;
   top: 50%;
   left: 50%;
-  color: rgba(255, 0, 0, 0.7);
-  font-size: 7rem;
-  transform: translate(-50%, -50%);
   z-index: 1;
+  font-size: 7rem;
+  position: absolute;
+  color: rgba(255, 0, 0, 0.7);
+  transform: translate(-50%, -50%);
 }
 
 .image.icon i:hover {
-  color: #ff0000;
   cursor: pointer;
-}
-
-
-
-.details {
-  margin-top: 50px;
+  color: #ff0000;
 }
 
 .details h3 {
+  margin-top: 40px;
   font-weight: 700;
+  font-size: larger;
+  padding-left: 15px;
 }
 
 .ratings {
-  color: #164bf8;
   font-size: 12px;
-  margin: 8px 0 0 5px;
+  font-weight: 600;
+  color: #164bf8;
+  margin: 0 0 0 5px;
+  padding-left: 10px;
 }
 
 .ratings i {
@@ -106,14 +106,16 @@ h1 {
 }
 
 ul {
-  list-style: none;
   padding: 0;
+  margin: 15px;
   color: #555;
   font-size: 14px;
-  margin: 15px;
+  list-style: none;
+
 }
 
 ul li {
+  line-height: 1.9;
   margin-bottom: 5px;
 }
 
@@ -123,12 +125,13 @@ ul li i {
 
 
 .add-button {
-  background-color: #027455;
-  color: white;
   border: none;
-  padding: 15px 80px;
-  border-radius: 20px;
+  color: white;
+  margin-top: 15px;
   font-weight: 600;
+  padding: 15px 200px;
+  border-radius: 20px;
+  background-color: #027455;
 }
 
 .add-button:hover {
@@ -137,8 +140,110 @@ ul li i {
 }
 
 .install {
+  width: 69px;
+  margin: 3% 45%;
   font-size: 10px;
   color: #666666c8;
-  margin: 3% 30%;
-  width: 69px;
+}
+
+/* Responsive Styles for Tablet above 768px */
+@media (max-width: 768px) {
+  .content {
+    gap: 5px;
+    margin-left: 0;
+    padding-left: 0;
+    flex-direction: row;
+  }
+
+  .image {
+    width: 100%;
+    margin: auto;
+    height: 250px;
+  }
+
+  .add-button {
+    width: auto;
+    font-size: 14px;
+    padding: 5px 25px;
+
+  }
+
+
+  ul li {
+    font-size: 13px;
+  }
+}
+
+/* Responsive Styles for Mobile (below 768px) */
+@media (max-width: 767px) {
+  body {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .notification {
+    height: 250px;
+  }
+
+  .content {
+    gap: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .image {
+    width: 80%;
+    margin: auto;
+    height: 200px;
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  .details h3 {
+    font-size: 1.2rem;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .ratings {
+    font-size: 10px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  ul {
+    margin: 10px;
+  }
+
+  ul li {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  ul li i {
+    font-size: 12px;
+  }
+
+  .add-button {
+    width: auto;
+    font-size: 8px;
+    margin: 10px 35% 0;
+    padding: 10px 15px;
+  }
+
+  .install {
+    width: auto;
+    font-size: 8px;
+    margin: 5px 40% 0;
+  }
+
+  .new-extension {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
 }
