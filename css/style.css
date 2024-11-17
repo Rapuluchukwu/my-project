@@ -74,14 +74,14 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: #ff0000b3;
+  color: rgba(255, 0, 0, 0.7);
   font-size: 7rem;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
 
 .image.icon i:hover {
-  color: rgba(255, 0, 0, 0.9);
+  color: #ff0000;
   cursor: pointer;
 }
 
@@ -101,6 +101,10 @@ h1 {
   margin: 8px 0 0 5px;
 }
 
+.ratings i {
+  color: #164bf8;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -113,28 +117,28 @@ ul li {
   margin-bottom: 5px;
 }
 
-ul li i{
-  background: none;
-  color: #63E6BE;
+ul li i {
+  color: #027455;
 }
 
 
 .add-button {
-  background-color: #02986d;
+  background-color: #027455;
   color: white;
   border: none;
-  padding: 10px 80px;
+  padding: 15px 80px;
   border-radius: 20px;
   font-weight: 600;
 }
 
 .add-button:hover {
   cursor: pointer;
+  background-color: #2e997d;
 }
 
 .install {
   font-size: 10px;
-  color: #666;
-  margin: 3% 50%;
-  width: 57px;
+  color: #666666c8;
+  margin: 3% 30%;
+  width: 69px;
 }
